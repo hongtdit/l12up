@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style></style>
+  <body>
+    <button onclick="start()">Start</button>
+    <div id="game-board"></div>
+    <script src="/demo.js"></script>
+    <!-- <input type="button" value="Nhap so" onclick="nhapSo()" /> -->
+    <!-- <script>
+      var kqsx = [
+        ["91082"],
+        ["22362"],
+        ["00497", "25741"],
+        ["83780", "71776", "83219", "79310", "25559", "28409"],
+        ["6094", "4114", "4358", "4970"],
+        ["2704", "2016", "1614", "0178", "3411", "3799"],
+        ["574", "202", "404"],
+        ["02", "57", "50", "82"],
+      ];
+      function loadKetqua() {
+        // In ra bang ket qua
+        let sout;
+        sout = "<table width='500' cellspacing='0' cellpadding='3'";
+        for (var i = 0; i < kqsx.length; i++) {
+          sout = sout + "<tr>";
+          sout = sout + "<td>" + "Giải " + i + ": " + kqsx[i] + "</td>";
+          sout = sout + "</tr>";
+        }
+        sout = sout + "</table>";
+        document.write(sout);
+      }
+
+      function nhapSo() {
+        let input = prompt("Nhap vao con so ban du doan:");
+
+        // Tim kiem ket qua
+        let stringKqsx = kqsx.toString();
+        let strFoxSp = stringKqsx.split(",");
+        for (const i in strFoxSp) {
+          let numb = strFoxSp[i].split("");
+          let concatNumb = numb.splice(numb.length - 2).join("");
+          if (concatNumb == input) {
+            document.write(strFoxSp[i] + "<br/>");
+          }
+        }
+      }
+
+      loadKetqua();
+    </script> -->
+
+    <!-- <p id="demo"></p>
+    <script>
+      // let array1 = ["chuoi", "tao", "cam"];
+      // let array2 = ["nuoc cam", "bia", "coca"];
+      // let array3 = ["bun", "pho", "com"];
+
+      // let arrays = array1.concat(array2, array3);
+      // console.log(array1);
+      // console.log(array2);
+      // console.log(array3);
+
+      // console.log(arrays);
+
+      // let text = "How are you doing today?";
+      // const myArray = text.split(" ");
+      // document.write(text + "<br>");
+      // document.write(myArray + "<br>");
+
+      // let text2 = "How are you ?";
+      // const myArray2 = text2.slice(" ");
+      // document.write(text2 + "<br>");
+      // document.write(myArray2);
+
+      const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+      // console.log(animals);
+      // console.log(animals.slice(2, 4));
+      // console.log(animals);
+      // // expected output: Array ["camel", "duck"]
+
+      // const months = ["Jan", "March", "April", "June"];
+      // console.log(months);
+      // console.log(months.splice(4, 1, "May"));
+      // console.log(months);
+    </script> -->
+    <!-- <script>
+      let strFox = "TRuonG MiNh ThU";
+      console.log("before:" + strFox);
+
+      var strFoxSp = strFox.split("");
+      console.log(strFoxSp);
+      let array = [];
+
+      for (const strFoxSpKey of strFoxSp) {
+        array.push(
+          strFoxSpKey < "a"
+            ? strFoxSpKey.toLowerCase()
+            : strFoxSpKey.toUpperCase()
+        );
+      }
+
+      console.log("after:" + array.join(""));
+    </script> -->
+
+    <!-- <script>
+      let strFox = "TRuonG MiNh ThU";
+      console.log("before:" + strFox);
+
+      var strFoxSp = strFox.split(" ");
+      let array = [];
+
+      for (const strFoxSpKey of strFoxSp) {
+        var tu = strFoxSpKey.split("");
+        for (const i in tu) {
+          if (i == 0) {
+            tu[i] = tu[i].toLowerCase();
+          } else {
+            tu[i] = tu[i].toUpperCase();
+          }
+        }
+        array.push(tu.join(""));
+      }
+
+      console.log("after:" + array.join(" "));
+    </script> -->
+  </body>
+</html>

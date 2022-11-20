@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Type anything slowly</h2>
+
+    <textarea
+      id="typingText"
+      rows="10"
+      cols="50"
+      onkeypress="typingText()"
+    ></textarea>
+
+    <script>
+      // B1: lay ra selectors
+      var textArea = document.getElementById("typingText");
+
+      // B2: Khai bao chuoi mac dinh
+      const textDefault = "Cong hoa xa hoi chu nghia Viet Nam";
+      // B3: Cat chuoi thanh mang
+      const textDefaultBreak = textDefault.split(" ");
+
+      // B4: Khai bao cac bien co
+      var count = 0;
+      var text = "";
+
+      // B5: Khai bao ham xu ly moi khi typing
+      function typingText() {
+        // 5.1: Kiem tra so lan nhap co vuot qua so tu trong doan van khong?
+        if (count < 8) {
+          // 5.2: Noi tiep tu vao chuoi hien thi
+          text += textDefaultBreak[count] + " ";
+          // 5.3: Tang luot typing
+          count++;
+        } else {
+          // 5.2-1: Xoa chuoi hien thi
+          text = "";
+          // 5.2-2: Dat lai lan nhap tu ve 0
+          count = 0;
+        }
+        // B6: Gan gia tri vao o hien thi
+        textArea.value = text;
+      }
+    </script>
+  </body>
+</html>
